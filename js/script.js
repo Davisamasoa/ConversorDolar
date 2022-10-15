@@ -8,9 +8,9 @@ let result;
 
 select.addEventListener("change", () => {
 	if (select.options[select.selectedIndex].textContent == "BRL") {
-		outraMoeda.textContent = "USD $";
+		outraMoeda.textContent = "USD";
 	} else {
-		outraMoeda.textContent = "BRL R$";
+		outraMoeda.textContent = "BRL";
 	}
 });
 

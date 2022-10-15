@@ -36,7 +36,7 @@ h3 {
 }
 
 .div-select {
-	width: 90px;
+	width: 80px;
 	color: white;
 	position: absolute;
 	left: -50px;
@@ -66,8 +66,7 @@ main div {
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
-	gap: 15px;
-	width: 350px;
+	width: 330px;
 	position: relative;
 }
 
@@ -117,9 +116,13 @@ input.eua:focus {
 }
 
 span {
-	color: white;
+	width: 80px;
+	color: black;
 	position: absolute;
-	left: -20px;
+	left: -50px;
+	background-color: #fff;
+	border-radius: 0.375rem;
+	padding: 0.375rem 2.25rem 0.375rem 0.75rem;
 }
 
 footer {
@@ -158,11 +161,8 @@ footer > * {
 		margin-left: 20px;
 	}
 
+	.div-select,
 	span {
-		left: 0px;
-	}
-
-	.div-select {
 		left: -20px;
 	}
 }
@@ -178,11 +178,8 @@ footer > * {
 		margin-left: 50px;
 	}
 
+	.div-select,
 	span {
-		left: 10px;
-	}
-
-	.div-select {
 		left: -00px;
 	}
 }
