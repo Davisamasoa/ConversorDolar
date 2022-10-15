@@ -6,7 +6,7 @@ const select = document.querySelector("select");
 const outraMoeda = document.querySelector(".outraMoeda");
 let result;
 
-select.addEventListener("click", () => {
+select.addEventListener("change", () => {
 	if (select.options[select.selectedIndex].textContent == "BRL") {
 		outraMoeda.textContent = "USD $";
 	} else {
