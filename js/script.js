@@ -5,6 +5,15 @@ const dolar = document.querySelector(".eua");
 const select = document.querySelector("select");
 const outraMoeda = document.querySelector(".outraMoeda");
 let result;
+
+select.addEventListener("click", () => {
+	if (select.options[select.selectedIndex].textContent == "BRL") {
+		outraMoeda.textContent = "USD $";
+	} else {
+		outraMoeda.textContent = "BRL R$";
+	}
+});
+
 async function realTimeDolar() {
 	let dolarValueAPI = await api_dolar();
 
@@ -24,6 +33,3 @@ function conversaoRealDolar() {
 }
 
 btn.addEventListener("click", conversaoRealDolar);
-select.addEventListener("click", () => {
-	select.options[select.selectedIndex].textContent == "BRL" ? (outraMoeda.textContent = "USD $") : (outraMoeda.textContent = "BRL R$");
-});
