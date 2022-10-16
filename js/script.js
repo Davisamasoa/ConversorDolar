@@ -25,10 +25,13 @@ function conversaoRealDolar() {
 		let dolarConverted = resultDolar;
 		if (select.options[select.selectedIndex].textContent == "BRL") {
 			result = +real.value / dolarConverted;
+			result = result.toLocaleString("en-US", { style: "currency", currency: "USD" });
 		} else {
 			result = +real.value * dolarConverted;
+			result = result.toLocaleString("pt-br", { style: "currency", currency: "BRL" });
 		}
-		dolar.textContent = result.toFixed(2);
+
+		dolar.textContent = result;
 	});
 }
 
