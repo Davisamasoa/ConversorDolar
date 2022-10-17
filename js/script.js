@@ -12,6 +12,8 @@ select.addEventListener("change", () => {
 	} else {
 		outraMoeda.textContent = "BRL";
 	}
+	dolar.textContent = "";
+	real.textContent = "";
 });
 
 async function realTimeDolar() {
