@@ -13,13 +13,12 @@ select.addEventListener("change", () => {
 		outraMoeda.textContent = "BRL";
 	}
 	dolar.textContent = "";
-	real.textContent = "";
 });
 
 async function realTimeDolar() {
 	let dolarValueAPI = await api_dolar();
 
-	return (+dolarValueAPI["USDBRL"].high).toFixed(2);
+	return (+dolarValueAPI["USDBRL"].bid).toFixed(2);
 }
 
 function conversaoRealDolar() {
