@@ -18,7 +18,7 @@ select.addEventListener("change", () => {
 async function realTimeDolar() {
 	const dolarValueAPI = await api_dolar();
 
-	return await (+dolarValueAPI["USDBRL"].bid).toFixed(2);
+	return await (+dolarValueAPI["USDBRL"].ask).toFixed(2);
 }
 
 function conversaoRealDolar() {
@@ -26,10 +26,16 @@ function conversaoRealDolar() {
 		let dolarConverted = resultDolar;
 		if (select.options[select.selectedIndex].textContent == "BRL") {
 			result = +real.value / dolarConverted;
-			result = result.toLocaleString("en-US", { style: "currency", currency: "USD" });
+			result = result.toLocaleString("en-US", {
+				style: "currency",
+				currency: "USD",
+			});
 		} else {
 			result = +real.value * dolarConverted;
-			result = result.toLocaleString("pt-br", { style: "currency", currency: "BRL" });
+			result = result.toLocaleString("pt-br", {
+				style: "currency",
+				currency: "BRL",
+			});
 		}
 
 		dolar.textContent = result;
@@ -37,6 +43,5 @@ function conversaoRealDolar() {
 }
 
 btn.addEventListener("click", () => {
-	conversaoRealDolar();
 	conversaoRealDolar();
 });
