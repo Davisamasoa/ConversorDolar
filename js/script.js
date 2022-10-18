@@ -16,7 +16,7 @@ select.addEventListener("change", () => {
 });
 
 async function realTimeDolar() {
-	let dolarValueAPI = await api_dolar();
+	const dolarValueAPI = await api_dolar();
 
 	return await (+dolarValueAPI["USDBRL"].bid).toFixed(2);
 }
@@ -36,4 +36,7 @@ function conversaoRealDolar() {
 	});
 }
 
-btn.addEventListener("click", conversaoRealDolar);
+btn.addEventListener("click", () => {
+	conversaoRealDolar();
+	conversaoRealDolar();
+});
