@@ -18,10 +18,10 @@ select.addEventListener("change", () => {
 async function realTimeDolar() {
 	const dolarValueAPI = await api_dolar();
 
-	return await (+dolarValueAPI["USDBRL"].ask).toFixed(2);
+	return await (+dolarValueAPI["USDBRL"].bid).toFixed(2);
 }
 
-function conversaoRealDolar() {
+async function conversaoRealDolar() {
 	realTimeDolar().then((resultDolar) => {
 		let dolarConverted = resultDolar;
 		if (select.options[select.selectedIndex].textContent == "BRL") {
