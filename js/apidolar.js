@@ -3,6 +3,6 @@ export async function api_dolar() {
 		"https://economia.awesomeapi.com.br/last/USD-BRL"
 	);
 	const result = response.json();
-	console.log(result);
+	// console.log(result);
 	return result;
 }
