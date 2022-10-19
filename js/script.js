@@ -13,7 +13,6 @@ select.addEventListener("change", () => {
 		outraMoeda.textContent = "BRL";
 	}
 	dolar.textContent = "";
-	real.textContent = "";
 });
 
 async function realTimeDolar() {
@@ -27,14 +26,22 @@ function conversaoRealDolar() {
 		let dolarConverted = resultDolar;
 		if (select.options[select.selectedIndex].textContent == "BRL") {
 			result = +real.value / dolarConverted;
-			result = result.toLocaleString("en-US", { style: "currency", currency: "USD" });
+			result = result.toLocaleString("en-US", {
+				style: "currency",
+				currency: "USD",
+			});
 		} else {
 			result = +real.value * dolarConverted;
-			result = result.toLocaleString("pt-br", { style: "currency", currency: "BRL" });
+			result = result.toLocaleString("pt-br", {
+				style: "currency",
+				currency: "BRL",
+			});
 		}
 
 		dolar.textContent = result;
 	});
 }
 
-btn.addEventListener("click", conversaoRealDolar);
+btn.addEventListener("click", () => {
+	conversaoRealDolar();
+});
