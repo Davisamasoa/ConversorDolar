@@ -18,7 +18,7 @@ select.addEventListener("change", () => {
 async function realTimeDolar() {
 	let dolarValueAPI;
 	dolarValueAPI = await api_dolar();
-	return (+dolarValueAPI["USDBRL"].bid).toFixed(2);
+	return (+dolarValueAPI["USDBRL"].ask).toFixed(2);
 }
 
 async function conversaoRealDolar() {
