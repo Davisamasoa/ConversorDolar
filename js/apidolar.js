@@ -3,6 +3,6 @@ export async function api_dolar() {
 		cache: "no-cache",
 	});
 	const result = await response.json();
-	console.log(result);
+	
 	return result;
 }
